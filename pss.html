@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Info PSS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="index.css">
+</header>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-logo">
+    <a href="">
+      <img src="logo.png" alt="Logo SKM2">
+	  <li><a class="navbar-description">Sekolah Kebangsaan Meru 2</a></li>
+    </a>
+  </div>
+  
+  <ul class="nav-links">
+    <li><a href="index.html">Laman utama</a></li>
+	
+	<li><a href="akhbar.html">Akhbar Digital</a></li>
+
+    <li class="dropdown">
+      <a href="pss.html" class="dropbtn">Info PSS</a>
+      <div class="dropdown-content">
+        <a href="rules.html">Peraturan</a>
+      </div>
+    </li>
+	
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Buku Online</a>
+      <div class="dropdown-content">
+        <a href="buku.html">Buku Teks</a>
+        <a href="majalah.html">Majalah Hiburan</a>
+      </div>
+    </li>
+	
+	<li><a href="info.html">Hubungi Kami</a></li>
+	
+    <li><a href="aboutme.html">About Me</a></li>
+  </ul>
+  
+  <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+    <i class="fa fa-bars"></i>
+  </a>
+</nav>
+
+
+<div class="header">
+ <div class="container">
+  <img src="header.gif" alt="Snow" style="width:100%;" height="350px">
+  <div class="bottom-right"><p id="demo"></p></div>
+  <div class="centered">
+  <h2 class="bounce-text">
+  <span>I</span><span>N</span><span>F</span><span>O</span><span> </span>
+  <span>P</span><span>S</span><span>S</span>
+  </h2>
+  
+  </div>
+ </div>
+</div>
+
+<script>
+const d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>
+
+<div class="row2"> 
+	<h1>AKTIVITI PSS</h2>
+
+
+
+<div class="flexbox">
+  <div class="text-content">
+    <h2>Program Latihan Industri TV PSS 2.0 Sinar Bestari</h2>
+    <p> Pada 24-25 Jun 2025, SKM2 telah menyertai satu program Latihan Industri PSS di bawah anjuran Sinar Harian berkolaborasi dengan produk Mahsuri.
+	<br>Program ini berlangsung di Dewan Karangkraf, Shah Alam. Pengalaman ini amat berharga bagi anak-anak SKM2 yang di bawah bimbingan Puan Wardiah. 
+    </p>
+  </div>
+  <div class="slider" id="slider1">
+    <img src="aktiviti1.jpg" alt="Activity" class="slide-img active" />
+    <img src="aktiviti2.jpg" alt="Activity" class="slide-img" />
+    <img src="aktiviti3.jpg" alt="Activity" class="slide-img" />
+	<img src="aktiviti4.jpg" alt="Activity" class="slide-img" />
+	<img src="aktiviti5.jpg" alt="Activity" class="slide-img" />
+	<img src="aktiviti6.jpg" alt="Activity" class="slide-img" />
+	<img src="aktiviti7.jpg" alt="Activity" class="slide-img" />
+	<img src="aktiviti8.jpg" alt="Activity" class="slide-img" />
+	<img src="aktiviti9.jpg" alt="Activity" class="slide-img" />
+				
+  </div>
+</div>
+
+
+<div class="flexbox reverse">
+  <div class="slider" id="slider2">
+    <img src="pic1.jpg" alt="Activity" class="slide-img active" />
+    <img src="pic2.jpg" alt="Activity" class="slide-img" />
+    <img src="pic3.jpg" alt="Activity" class="slide-img" />
+	<img src="pic4.jpg" alt="Activity" class="slide-img" />
+	<img src="pic5.jpg" alt="Activity" class="slide-img" />
+	<img src="pic6.jpg" alt="Activity" class="slide-img" />
+	<img src="pic7.jpg" alt="Activity" class="slide-img" />
+	<img src="pic8.jpg" alt="Activity" class="slide-img" />
+	<img src="pic9.jpg" alt="Activity" class="slide-img" />
+	<img src="pic10.jpg" alt="Activity" class="slide-img" />
+  </div>
+  <div class="text-content">
+    <h2>Penyampaian Hadiah Minggu PSS</h2>
+    <p>Pada tanggal 5/5/2025 yang berlangsung pada hari Isnin, guru-guru SKM2 mengucapakan Tahniah kepada pelajar-pelajar Tahun 1 hingga Tahun 6 atas pencapaian dalam program NILAM.<br><br>🌟Pra Sekokah<br>🌟PPKI<br>🌟Tahap 1<br>🌟Tahap 2<br>
+	
+    </p>
+  </div>
+</div>
+
+</div>
+
+<script>
+function startSlider(sliderId) {
+  const slides = document.querySelectorAll(`#${sliderId} .slide-img`);
+  let currentIndex = 0;
+
+  setInterval(() => {
+    slides[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add("active");
+  }, 2000); // change slide every 2 seconds
+}
+
+startSlider("slider1");
+startSlider("slider2");
+</script>
+
+
+
+<div class="footer">
+
+  <div class="footer-container">
+  <p class="footer-bottom">&copy; 2025 Sekolah Kebangsaan Meru 2. Semua Hak Terpelihara.</p>
+  </div>
+  
+</div>
+
+</body>
+</html>
+
+

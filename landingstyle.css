@@ -1,0 +1,122 @@
+
+*{
+margin:0;
+padding:0;
+flex: 1;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+header {
+	width: 100%;
+	height: 100px;
+	background: #004d40;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+
+.bg-img {
+  /* The image used */
+  background-image: url("skm2.jpg");
+
+  min-height: 500px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("skm2.jpg");
+
+  min-height: 600px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.container h1 {
+  font-size: 25px;
+  border-radius: 15px;
+}
+
+
+/* Full-width input fields */
+input[type=tel], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=tel]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #004d40;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------Style the footer-------------------------------------------------------------- */
+
+.footer {
+    background: #004d40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 0px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: auto;
+}
+
+.footer-bottom {
+	margin: 20px;
+	font-size: 15px;
+}
+
+.footer-bottom p {
+  margin-top: 0px;
+  font-size: 15px;
+  text-align: center;
+}
+

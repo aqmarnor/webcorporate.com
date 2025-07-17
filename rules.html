@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Peraturan PSS</title>
+	<link rel="stylesheet" href="index.css">
+</header>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-logo">
+    <a href="">
+      <img src="logo.png" alt="Logo SKM2">
+	  <li><a class="navbar-description">Sekolah Kebangsaan Meru 2</a></li>
+    </a>
+  </div>
+  
+  <ul class="nav-links">
+    <li><a href="index.html">Laman utama</a></li>
+	
+	<li><a href="akhbar.html">Akhbar Digital</a></li>
+
+    <li class="dropdown">
+      <a href="pss.html" class="dropbtn">Info PSS</a>
+      <div class="dropdown-content">
+        <a href="rules.html">Peraturan</a>
+      </div>
+    </li>
+	
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Buku Online</a>
+      <div class="dropdown-content">
+        <a href="buku.html">Buku Teks</a>
+        <a href="majalah.html">Majalah Hiburan</a>
+      </div>
+    </li>
+	
+	<li><a href="info.html">Hubungi Kami</a></li>
+	
+    <li><a href="aboutme.html">About Me</a></li>
+  </ul>
+  
+  <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+    <i class="fa fa-bars"></i>
+  </a>
+</nav>
+
+<div class="header">
+ <div class="container">
+  <img src="header.gif" alt="Snow" style="width:100%;" height="350px">
+  <div class="bottom-right"><p id="demo"></p></div>
+  <div class="centered">
+  <h2 class="bounce-text">
+  <span>P</span><span>E</span><span>R</span><span>A</span><span>T</span><span>U</span><span>R</span><span>A</span><span>N</span><span> </span>
+  <span>P</span><span>S</span><span>S</span>
+  </h2>
+  
+  </div>
+ </div>
+</div>
+
+<script>
+const text = document.getElementById('bounce-text');
+const strText = text.textContent;
+text.textContent = "";
+
+// Split into spans for each letter with delay
+for (let i = 0; i < strText.length; i++) {
+  const span = document.createElement('span');
+  span.textContent = strText[i];
+  span.classList.add('bounce-text');
+  span.style.animationDelay = `${i * 0.1}s`;
+  text.appendChild(span);
+}
+</script>
+
+<script>
+const d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>
+
+<div class="column">
+  <div class="rules">
+    <h1>PERATURAN PENGGUNAAN PUSAT SUMBER</h1>
+
+    <h2>DISIPLIN</h2>
+    <ol>
+      <li>Pelajar diminta senyap apabila memasuki pss.</li>
+      <li>Pelajar mesti beratur semasa meminjam atau memulangkan buku.</li>
+      <li>Pelajar tidak dibenarkan makan, minum atau tidur di dalam pss.</li>
+      <li>Pelajar tidak dibenarkan membuka tutup suis-suis dan mengubah kedudukan kerusi meja di dalam perpustakaan tanpa kebenaran guru pss.</li>
+      <li>Pelajar dikehendaki duduk di tempat-tempat yang disediakan dan tidak dibenarkan berhimpun di rak-rak, pintu dan kaunter.</li>
+      <li>Pelajar dikehendaki memasukkan kembali kerusi ke bawah meja dengan kemas selepas digunakan.</li>
+      <li>Pelajar tidak boleh mengadakan mesyuarat atau perjumpaan di dalam perpustakaan tanpa kebenaran.</li>
+      <li>Pelajar tidak dibenarkan masuk ke pss semasa sesi pembelajaran tanpa diiringi guru.</li>
+      <li>Pelajar dikehendaki meletakkan beg mereka di luar pss di tempat yang disediakan.</li>
+    </ol>
+	
+    <h2>BAHAN-BAHAN PUSAT SUMBER</h2>
+    <ol>
+      <li>Pelajar mesti menggantikan kos buku-buku yang dihilangkan, diconteng atau dirosakkan.</li>
+      <li>Akhbar atau majalah hendaklah dikembalikan ke tempat asal dan tidak dibenarkan dibawa keluar dari pss.</li>
+      <li>Buku-buku yang selesai digunakan hendaklah diletakkan di tempat disediakan.</li>
+    </ol>
+
+    <h2>PAKAIAN</h2>
+    <ol>
+      <li>Pakaian mestilah kemas dan lengkap sewaktu berada dalam pss.</li>
+      <li>Jaket, baju panas dan lain-lain pakaian selain pakaian sekolah adalah tidak dibenarkan dipakai atau dibawa masuk ke pss.</li>
+    </ol>
+
+    <h2>PERATURAN PENGGUNAAN PSS UNTUK GURU</h2>
+    <ol>
+      <li>Guru-guru perlu mengisi buku penggunaan bilik semasa menggunakan bilik pusat sumber.</li>
+      <li>Guru-guru pengiring perlu mengawal disiplin pelajar di dalam bilik-bilik pusat sumber.</li>
+      <li>Sebarang tempahan penggunaan bilik perlu dibuat sekurang-kurangnya sehari sebelum hari penggunaan.</li>
+      <li>Semua peminjaman bahan dan buku perlu dibuat dengan pengawasan pengawas pusat sumber bertugas atau guru pss.</li>
+      <li>Guru-guru perlu memastikan semua suis ditutup dengan elok dan bilik dikunci selepas menggunakan bilik-bilik pusat sumber.</li>
+    </ol>
+</div>	
+</div>
+
+<div class="column">
+  <div class="rules">
+    <h1>PERATURAN PINJAMAN DAN PEMULANGAN</h1>
+
+    <h2 class="tooltip">KEAHLIAN
+	  <span class="tooltiptext">Terbuka kepada Pelajar Tahun 4 - Tahun 6</span></h2>
+    <ol>
+      <li>Semua pelajar dan kakitangan SK Meru 2 layak menjadi ahli pusat sumber sekolah.</li>
+      <li>Semua pengguna yang ingin menjadi ahli perlulah memiliki kad pss dan mendaftar di pss.</li>
+      <li>Kehilangan atau kerosakan kad hendaklah diberitahu segera. Kad yang baru diganti atau diterima perlu didaftar semula.</li>
+      <li>Pelajar hanya dibenarkan meminjam 2 buah buku sahaja dan 4 buah buku bagi guru. meminjam kad pengguna lain adalah satu kesalahan besar dan tindakan disiplin akan diambil.</li>
+    </ol>
+
+    <h2>PEMINJAMAN DAN PEMULANGAN</h2>
+    <ol>
+      <li>Mengikut jadual waktu penggunaan PSS.</li>
+    </ol>
+
+    <h2>TEMPOH PINJAMAN</h2>
+    <ol>
+      <li>Buku bertanda merah – buku rujukan. dibenarkan pinjam selama sehari.</li>
+      <li>Buku bertanda biru dan kuning – buku bukan fiksyen dan fiksyen. Dibenarkan dipinjam selama 7 hari termasuk hari cuti am.</li>
+      <li>Buku bertanda hijau – dibenarkan dipinjam selama 2 hari.</li>
+      <li>Majalah/keratan akhbar/bank soalan – rujukan dalam pss sahaja dan tidak boleh dibawa keluar.</li>
+    </ol>
+
+    <h2>PERATURAN PINJAMAN</h2>
+    <ol>
+      <li>Tanggungjawab pelajar menjaga buku yang dipinjam. jika hilang, pelajar wajib membayar balik mengikut harga asal buku tersebut.</li>
+      <li>Sila beratur semasa melakukan proses pinjaman dan pastikan dalam keadaan senyap.</li>
+      <li>Sila pastikan tarikh pemulangan tidak lewat dari tarikh pulang. jika lewat, tindakan akan diambil.</li>
+      <li>Kertas soalan tahun lepas/bank soalan/keratan akhbar tidak boleh diconteng. jika didapati pelajar menconteng atau menghilangkannya, pelajar wajib membayar harga photostat untuk setiap mukasurat.</li>
+      <li>Sekiranya melanggar peraturan yang ditetapkan, kad pelajar akan ditahan.</li>
+      <li>Pelajar akan didenda sebanyak RM 0.20 sehari (tidak termasuk hari cuti) jika lewat memulangkan bahan yang dipinjam.</li>
+      <li>Kad pelajar akan ditahan sehinggalah denda diselesaikan.</li>
+    </ol>
+</div>
+</div>
+
+<div class="footer">
+
+  <div class="footer-container">
+  <p class="footer-bottom">&copy; 2025 Sekolah Kebangsaan Meru 2. Semua Hak Terpelihara.</p>
+  </div>
+  
+</div>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,1170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: Georgia, serif;
+	padding: 0;
+	background: #f1f1f1;
+}
+
+.mySlides {display:none;}
+
+/*--------------------------------------------------Navigation bar-----------------------------------------------------------------------*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.navbar-logo img {
+  height: 40px; /* Adjust as needed */
+  margin: 20px;
+
+}
+
+.navbar-logo li {
+  height: 10px;
+  float: right;
+  list-style: none;
+  padding: 10px;
+  margin: 0px;
+  display: inline; 
+  margin: 20px;
+}
+
+.navbar-logo a {
+  color: black;
+  text-decoration: none;
+  padding: px;
+  display: inline;
+}
+
+.navbar-description {
+  font-size: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+  display: inline;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 10px;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+  color: red;
+}
+
+.icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 80px; /* Adjust based on navbar height */
+    left: 0;
+    background-color: #333;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .nav-links a {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+  }
+  
+   .icon {
+    display: block;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+   .navbar.responsive .nav-links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    background-color: #333;
+  }
+}
+
+
+/* -------------------------------------------Header/Blog Title--------------------------------------------------------- */
+.header {
+  padding: 0px;
+  text-align: center;
+  background: #faefe3;
+  height: 350px;
+}
+
+
+.header p {
+  font-size: 10px;
+}
+
+.header h2 {
+  font-size: 35px;
+  color: black;
+}
+
+.header h3 {
+  font-size: 35px;
+  color: turquoise;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: BLACK;
+  margin:0;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font: ;
+}
+
+}
+.bounce-text {
+  color: #28ff55;
+  position: absolute;
+  transform: translate(-50%, 50%);
+  left: 50%;
+  top: 50%;
+  line-height: 0;
+  display: flex;
+  gap: 100px;
+  font-size: 30px;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.bounce-text span {
+  display: inline-block;
+  animation: bounce 1.0s infinite ease-in-out;
+}
+.bounce-text span:nth-child(1),.bounce-text span:nth-child(6),.bounce-text span:nth-child(11) {
+  animation-delay: 0s;
+}
+.bounce-text span:nth-child(2),.bounce-text span:nth-child(7),.bounce-text span:nth-child(12) {
+  animation-delay: 0.2s;
+}
+.bounce-text span:nth-child(3),.bounce-text span:nth-child(8),.bounce-text span:nth-child(13) {
+  animation-delay: 0.4s;
+}
+.bounce-text span:nth-child(4),.bounce-text span:nth-child(9),.bounce-text span:nth-child(14){
+  animation-delay: 0.6s;
+}
+.bounce-text span:nth-child(5),.bounce-text span:nth-child(10),.bounce-text span:nth-child(15) {
+  animation-delay: 0.8s;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/*-------------------------------------------------LAMAN UTAMA PAGE CONTENT------------------------------------------------------------------------*/
+
+.column {   
+    width: 100%;
+    padding: 10px;
+	background-color: black;
+    text-align: center;
+	height: 10%;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin:20px;
+}
+
+.card {
+  background: white;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  font-size: 16px;
+  margin: 0 0 10px 0;
+  color: #1a1a1a;
+}
+
+.card-content a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background-color: turquoise;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.card-content a:hover {
+  color: black;
+}
+
+.card-content .date {
+  font-size: 12px;
+  color: #777;
+  margin-top: auto;
+}
+
+
+.card2 {
+  background-image: url('library.jpg'); /* replace with your image file */
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  position: relative;
+  color: white; /* default text color on image */
+}
+
+.mission-vision-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.mission, .vision {
+    width: 45%;
+    float: left;
+    margin: 2.5%;
+    background-color: #ffdd47;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.mission h2, .vision h2 {
+    margin: 30px;
+    color: #d6156f;
+}
+
+.mission p, .vision p {
+    color: #d6156f;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+.operation-box {
+	width: 100%;
+    margin: 0;
+    padding: 20px;
+	background-color: #a6e9ff;
+	text-align: center;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	box-align: center;
+}
+
+.clearfix {
+  overflow: visible;
+}
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.clearfix h1 {
+	margin: 100px;
+}
+
+.box h3 {
+    margin-bottom: 0px;
+    color: #4caf50;
+}
+
+.box p {
+    color: #555;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.box img{
+	border-radius: 20px;
+}
+
+.box {
+    background-color: ;
+    padding: 40px;
+    width: 50%;
+    border-radius: 0px;
+	float: left;
+	height: 600px;
+}
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: left;
+	display: block;
+	
+	
+.box1:hover {
+    transform: translateY(-5px);
+}
+
+.img-container {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+
+.row {
+	text-align: center;
+	display: block;
+	background-color: turquoise;
+	color: white;
+	flex: 1; 
+}
+
+.row h2{
+	color: white; 
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ------------------------------------------------AKHBAR DIGITAL BODY CONTENT------------------------------------------------------ */
+
+.berita1 h1 {
+  background-color: white;
+  text-align: center;
+  color: black;
+  padding: 20px;
+
+}
+
+.berita1 a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;  
+}
+
+.berita1 h2, .column {
+  background-color: white;
+  padding: 1px;
+  margin-top: 1px;
+  text-align: center;
+}
+
+.berita1 {
+  background-color:white;
+  text-align: center;
+  color: white;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+.berita h2 {
+  max-width: 80%;
+  color: red;
+  margin: auto;
+  background: #f2dedc;
+  padding: 20px;
+  box-shadow: 10px px 90px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.berita1 iframe {
+	border-radius: 30px;
+	width: 100%;
+}
+
+.button {
+  border-radius: 30px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 0px;
+}
+
+.button1 {
+  background-color: red; 
+  color: black; 
+}
+
+.button1:hover {
+  background-color: black;
+  color: white;
+}
+
+/*------------------------------------------------------INFO PSS CONTENT---------------------------------------------------------------*/
+
+
+.row2 {
+	text-align: center;
+	display: block;
+	background-color: #bfffd3;
+	color: white;
+	flex: 1; 
+	height: 50px;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  margin-bottom: 20px;
+}
+
+.flexbox.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-content {
+  flex: 1;
+  padding: 10px;
+}
+
+.text-content p {
+  padding-right: 20px;
+  padding-left: 20px;
+  color: black;
+  text-align: left;
+}
+
+.text-content h2 {
+  padding-right: 20px;
+  padding-left: 20px;
+  color: black ;
+  text-align: left;
+}
+
+.slider {
+  flex: 1;
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
+
+.slider img {
+  border-radius: 20px;
+}
+
+.slide-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide-img.active {
+  opacity: 1;
+}
+
+
+/* ------------------------------------------------PERATURAN BODY CONTENT------------------------------------------------------ */
+
+.rules h1 {
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #2c3e50;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  	text-align: center;
+}
+
+.rules h2 {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: PURPLE;
+  margin-top: 30px;
+}
+
+.rules ol {
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 20px;
+}
+
+.rules ol li {
+  margin-bottom: 10px;
+  	text-align: left;
+	padding: 0px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+/*------------------------------------------------------------------------BODY CONTENT--------------------------------------------------------------------*/
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+/* ----------------------------------------------BUKU PAGE BODY CONTENT----------------------------------------- */
+div.scroll-container {
+  display: inline-block;
+  background-color: ;
+  overflow: auto;
+  border-radius: 10px;
+  white-space: nowrap;
+  text-align: center;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: px;
+  display: inline-block;
+}
+
+.buku {
+  background-color: purple;
+  text-align: center;
+  padding: 20px;
+}
+
+.buku h1 {
+	color: white;
+}
+
+.buku h2 {
+	color: black;
+}
+
+.bukuteks {
+  background-color: #fffed4;
+  padding: 10px 20px;
+  margin-top: 23px;
+  border-radius: 30px;
+}
+
+.scroll-container {
+  overflow: visible;
+  width: 100%;
+  border: px solid #ccc;
+  border-radius: 30px;
+}
+
+.scroll-content {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.scroll-container:hover .scroll-content {
+  animation-play-state: paused; /* Stops scrolling on hover */
+}
+
+.scroll-content a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.scroll-content p {
+  font-size: 18px;
+  color: black;
+  background-color: white;
+  border: 0px solid #421111;
+  padding: 1px 20px;
+  border-radius: 100px;
+  text-align: center;
+  cursor: pointer;
+  max-width: 1000px;
+  margin: 20px auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.scroll-content a  {
+	  padding: 10px;
+	  border-radius: 10px;
+	  text-decoration: none;
+	  background-color: white;
+	  border: 0px solid red;
+}
+
+.scroll-content a:hover {
+  transform: scale(1.05);
+  opacity: 1.0;
+  background-color: #3366cc;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.scroll-content img {
+  display: block;
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.clearfix1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Animation for auto scroll */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/*---------------------------------------------MAJALAH PAGE BODY CONTENT-------------------------------------------------------------*/
+.collection-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.collection-section h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.collection-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 400px;
+  perspective: 1000px;
+  text-decoration: none; /* Remove underline from links */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background-color: #34495e;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.flip-card-back h3 {
+  margin: 0 0 10px 0;
+}
+
+.flip-card-back p {
+  font-size: 0.9em;
+  color: #eee;
+}
+
+
+/* --------------------------------------------HUBUNGI KAMI PAGE ------------------------------------------------------------ */
+.library-details {
+    width: 50%;
+    float: left;
+    background-color: lightyellow;
+    padding: 30px;
+	margin-left: 3%;
+	margin-bottom: 3%;
+    border-radius: 10px;
+	height: 400px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	text-align: left;
+}
+
+.library-details h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.library-details p {
+    line-height: 2;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Feedback Form with lightbox effect */
+.feedback-form {
+    width: 40%;
+    float: right;
+    background-color: rgba(230, 255, 255, 0.95);
+    padding: 20px;
+	margin-right: 3%;
+	margin-bottom: 3%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	height: 400px;
+}
+
+.feedback-form h2 {
+    margin: 15px;
+    color: #333;
+}
+
+/* Form inputs */
+.feedback-form form label {
+    display: block;
+    margin: 10px  5px;
+    font-size: 14px;
+    color: #333;
+	text-align: left;
+}
+
+.feedback-form form input,.feedback-form form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+}
+
+.feedback-form form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: lightyellow;
+    color: black;
+    border: px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.feedback-form form button:hover {
+    background-color:#ff7d8c;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .library-details,
+    .feedback-form {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Add a card effect for articles */
+.card3 {
+  background-color: white;
+  padding: 40px;
+  margin-top: px;
+}
+
+/* Heading styling */
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 100%;
+    margin: ;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    display: block;
+}
+
+/* Social Media Section */
+.social-media-section {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.social-media-section h2 {
+    margin: 30px;
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Individual Icons */
+.social-icons a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 100%;
+    background-color: yellow;
+    color: black;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects with Brand Colours */
+.social-icons a:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.social-icons a.facebook:hover {
+    background-color: #2453ff;
+}
+
+.social-icons a.youtube:hover {
+    background-color: #ff0000;
+}
+
+.fa {
+  padding: px;
+  font-size: px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: ;
+  color: black;
+}
+
+.fa-youtube {
+  background: ;
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .social-icons a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+    }
+}
+
+
+
+/*----------------------------------ABOUT ME PAGE BODY CONTENT-------------------------------------------------------*/
+
+/* Add a card effect for articles */
+.about h2 {
+  background-color: pink;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 1px;
+}
+
+.picture {
+  background-color: ;
+  color: black;
+  text-align: center;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+.myinfo {
+  background-color: pink;
+  color: black;
+  text-align: center;
+  padding-right: 100PX;
+  padding-left: 100PX;
+  padding-bottom: 1%;
+  margin: ;
+}
+
+.myselfpage {
+	background-color: white;
+	text-align: center;
+	padding: 0px;
+	margin-top: 0px;
+}
+
+
+table, th, td {
+	border: 5px;
+	border-radius: 5px;
+	border-collapse: collapse;
+}
+
+th {
+	font-size: 16px;
+	padding-top: 5px;
+	padding-bottom: 15px;
+	padding-right: 10px;
+	text-align: left;
+	border-bottom: 1px solid blue;
+}
+
+td {
+	font-size: 16px;
+	padding-top: 5px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	text-align: left;
+	border-bottom: 1px solid blue;
+	color: black;
+}
+
+tr:hover {background-color: turquoise;}
+
+
+
+/*--------------------------------------------------------Footer-------------------------------------------------*/
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.footer-bottom {
+	margin: 20px;
+	font-size: 15px;
+}
+
+.footer-bottom p {
+  margin-top: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .column {   
+    width: 100%;
+    padding: 100px;
+	background-color: white;
+    margin-top: 100px;
+    text-align: center;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: right;
+    width: 100%;
+  }
+}
